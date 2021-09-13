@@ -6,7 +6,7 @@
      # If your hooks are intrusive, avoid running on each commit with a default_states like this:
      # default_stages = ["manual" "push"];
      hooks = {
-       prettier.enable = true;
+      # prettier.enable = true;
        shellcheck.enable = true;
      };
    };
