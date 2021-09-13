@@ -1,4 +1,4 @@
-# [Nix](#) 
+# [Nix](#)
 
 > Opinionated repository template
 
@@ -19,13 +19,13 @@ Based on [nix.dev](https://nix.dev) tutorials, repository template to get you st
 ## Getting started
 
 1. Follow tutorial for [creating a binary cache](https://nix.dev/tutorials/continuous-integration-github-actions.html)
-2. Replace ``nix-getting-started-template`` in ``.github/workflows/test.yml`` with the name of your binary cache
+2. Replace `nix-getting-started-template` in `.github/workflows/test.yml` with the name of your binary cache
 
 ## Using the project
 
 Follow [direnv setup](https://nix.dev/tutorials/declarative-and-reproducible-developer-environments.html#direnv-automatically-activating-the-environment-on-directory-change) and run `direnv allow`
 
-## CI: Using Cacheix 
+## CI: Using Cacheix
 
 ```yml
 # Cachix Workflow
@@ -37,14 +37,13 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: cachix/install-nix-action@v12
-    - uses: cachix/cachix-action@v8
-      with:
-        name: nix-getting-started-template
-        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
-        # Only needed for private caches
-        #authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-    - run: nix-build https://github.com/$GITHUB_REPOSITORY/archive/$GITHUB_SHA.tar.gz
-    - run: nix-shell https://github.com/$GITHUB_REPOSITORY/archive/$GITHUB_SHA.tar.gz --run "echo OK"
-
+      - uses: cachix/install-nix-action@v12
+      - uses: cachix/cachix-action@v8
+        with:
+          name: nix-getting-started-template
+          signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
+          # Only needed for private caches
+          #authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+      - run: nix-build https://github.com/$GITHUB_REPOSITORY/archive/$GITHUB_SHA.tar.gz
+      - run: nix-shell https://github.com/$GITHUB_REPOSITORY/archive/$GITHUB_SHA.tar.gz --run "echo OK"
 ```
