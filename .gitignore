@@ -1,5 +1,5 @@
-# nix
-
+# -*- mode: gitignore; -*-
+out/
 result
 result-*
 .pre-commit-config.yaml
@@ -8,3 +8,13 @@ result-*
 node_modules
 *.log
 *.tgz
+build/
+dist/
+types/
+typechain/
+.env
+__pycache__
+.history
+.hypothesis/
+build/
+reports/
