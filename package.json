@@ -1,0 +1,24 @@
+{
+  "name": "nix-dapptools-boilerplate",
+  "version": "0.0.0",
+  "description": "Opinionated dapptools repository template",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "compile": "make",
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/nix-template.git"
+  },
+  "keywords": ["ethereum", "dapptools", "nix", "nix tools", "web3", "dapphub"],
+  "author": "SEE CONTRIBUTORS",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/sambacha/nix-template/issues"
+  },
+  "homepage": "https://github.com/sambacha/nix-template#readme"
+}

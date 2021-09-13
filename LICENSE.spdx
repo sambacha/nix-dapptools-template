@@ -1,0 +1,7 @@
+# @license $SPDX_LICENSE
+SPDXVersion: SPDX-2.0
+Creator: $GITHUB_USER
+PackageName: nix-dapptools-boilerplate
+PackageOriginator: $GITHUB_USER
+PackageHomePage: https://github.com/sambacha/nix-dapptools-boilerplate
+PackageLicenseDeclared: $SPDX_LICENSE
