@@ -18,3 +18,4 @@ __pycache__
 .hypothesis/
 build/
 reports/
+/out
